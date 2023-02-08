@@ -1,0 +1,15 @@
+[submodule "Products"]
+	path = Products
+	url = https://github.com/BootcampQuarkus/Products
+[submodule "Operations"]
+	path = Operations
+	url = https://github.com/BootcampQuarkus/Operations
+[submodule "Payments"]
+	path = Payments
+	url = https://github.com/BootcampQuarkus/Payments
+[submodule "Cards"]
+	path = Cards
+	url = https://github.com/BootcampQuarkus/Cards
+[submodule "Customers"]
+	path = Customers
+	url = https://github.com/RECAVERO/service-customer-quarkus

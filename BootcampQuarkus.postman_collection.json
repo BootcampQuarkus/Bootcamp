@@ -1,0 +1,490 @@
+{
+	"info": {
+		"_postman_id": "b9ce0798-35b1-4921-a1d2-e0afe8bdef42",
+		"name": "BootcampQuarkus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8000822"
+	},
+	"item": [
+		{
+			"name": "Customers",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/8080/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"8080",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/8080/customers/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"8080",
+								"customers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/8080/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"8080",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/8080/customers/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"8080",
+								"customers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/8080/customers/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"8080",
+								"customers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Accounts",
+					"item": [
+						{
+							"name": "GetAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{productUrl}}/accounts",
+									"host": [
+										"{{productUrl}}"
+									],
+									"path": [
+										"accounts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{productUrl}}/accounts/1",
+									"host": [
+										"{{productUrl}}"
+									],
+									"path": [
+										"accounts",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"amount\": 500.00,\r\n    \"cutomerId\": 101,\r\n    \"cardId\": 101\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{productUrl}}/accounts",
+									"host": [
+										"{{productUrl}}"
+									],
+									"path": [
+										"accounts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"amount\": 600.00,\r\n    \"cutomerId\": 102,\r\n    \"cardId\": 102\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{productUrl}}/accounts/1",
+									"host": [
+										"{{productUrl}}"
+									],
+									"path": [
+										"accounts",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{productUrl}}/accounts/2",
+									"host": [
+										"{{productUrl}}"
+									],
+									"path": [
+										"accounts",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Credits",
+					"item": [
+						{
+							"name": "GetAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{productUrl}}/credits",
+									"host": [
+										"{{productUrl}}"
+									],
+									"path": [
+										"credits"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{productUrl}}/credits/1",
+									"host": [
+										"{{productUrl}}"
+									],
+									"path": [
+										"credits",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"amount\": 500.00,\r\n    \"cutomerId\": 101,\r\n    \"balance\":300,\r\n    \"dues\":5,\r\n    \"paymentDueDate\":\"10\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{productUrl}}/credits",
+									"host": [
+										"{{productUrl}}"
+									],
+									"path": [
+										"credits"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"amount\": 600.00,\r\n    \"cutomerId\": 101,\r\n    \"balance\":500,\r\n    \"dues\":6,\r\n    \"paymentDueDate\":\"10\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{productUrl}}/credits/1",
+									"host": [
+										"{{productUrl}}"
+									],
+									"path": [
+										"credits",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{productUrl}}/credits/2",
+									"host": [
+										"{{productUrl}}"
+									],
+									"path": [
+										"credits",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "LineOfCredits",
+					"item": [
+						{
+							"name": "GetAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{productUrl}}/linesofcredit",
+									"host": [
+										"{{productUrl}}"
+									],
+									"path": [
+										"linesofcredit"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{productUrl}}/linesofcredit/1",
+									"host": [
+										"{{productUrl}}"
+									],
+									"path": [
+										"linesofcredit",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"amount\": 500.00,\r\n    \"cutomerId\": 101,\r\n    \"available\":200,\r\n    \"costs\":300,\r\n    \"closingDate\":\"10\",\r\n    \"paymentDueDate\": \"15\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{productUrl}}/linesofcredit",
+									"host": [
+										"{{productUrl}}"
+									],
+									"path": [
+										"linesofcredit"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"amount\": 800.00,\r\n    \"cutomerId\": 101,\r\n    \"available\":400,\r\n    \"costs\":400,\r\n    \"closingDate\":\"11\",\r\n    \"paymentDueDate\": \"14\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{productUrl}}/linesofcredit/1",
+									"host": [
+										"{{productUrl}}"
+									],
+									"path": [
+										"linesofcredit",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{productUrl}}/linesofcredit/2",
+									"host": [
+										"{{productUrl}}"
+									],
+									"path": [
+										"linesofcredit",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Operations",
+			"item": []
+		},
+		{
+			"name": "Cards",
+			"item": []
+		},
+		{
+			"name": "Payments",
+			"item": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "productUrl",
+			"value": "http://localhost:8000",
+			"type": "string"
+		}
+	]
+}
