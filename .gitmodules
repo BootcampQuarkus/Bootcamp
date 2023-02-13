@@ -12,4 +12,4 @@
 	url = https://github.com/BootcampQuarkus/Cards
 [submodule "Customers"]
 	path = Customers
-	url = https://github.com/RECAVERO/service-customer-quarkus
+	url = https://github.com/BootcampQuarkus/Customer
