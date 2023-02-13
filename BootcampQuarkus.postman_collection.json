@@ -157,7 +157,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"amount\": 500.00,\r\n    \"cutomerId\": 101,\r\n    \"cardId\": 101\r\n}",
+									"raw": "{\r\n    \"amount\": 500.00,\r\n    \"customerId\": 101\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -209,13 +209,13 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "{{productUrl}}/accounts/2",
+									"raw": "{{productUrl}}/accounts/1",
 									"host": [
 										"{{productUrl}}"
 									],
 									"path": [
 										"accounts",
-										"2"
+										"1"
 									]
 								}
 							},
@@ -449,11 +449,435 @@
 		},
 		{
 			"name": "Operations",
-			"item": []
+			"item": [
+				{
+					"name": "OperationType",
+					"item": [
+						{
+							"name": "OperationType",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8002/operationtype",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"operationtype"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Deposit",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\":500.00,\r\n    \"description\":\"\",\r\n    \"sourceAccount\":\"\",\r\n    \"destinationAccount\":1,\r\n    \"operationTypeId\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8002/operation/deposit",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"operation",
+								"deposit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retiro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\":50.00,\r\n    \"description\":\"\",\r\n    \"sourceAccount\":\"\",\r\n    \"destinationAccount\":1,\r\n    \"operationTypeId\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8002/operation/withdrawal",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"operation",
+								"withdrawal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deposit",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\":500.00,\r\n    \"description\":\"\",\r\n    \"sourceAccount\":\"\",\r\n    \"destinationAccount\":1,\r\n    \"operationTypeId\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8002/operation/deposit",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"operation",
+								"deposit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retiro",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\":50.00,\r\n    \"description\":\"\",\r\n    \"sourceAccount\":\"\",\r\n    \"destinationAccount\":1,\r\n    \"operationTypeId\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8002/operation/withdrawal",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"operation",
+								"withdrawal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transferencia",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\":300.00,\r\n    \"description\":\"\",\r\n    \"sourceAccount\":\"1\",\r\n    \"destinationAccount\":3,\r\n    \"operationTypeId\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8002/operation/transfer",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"operation",
+								"transfer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transferencia",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\":300.00,\r\n    \"description\":\"\",\r\n    \"sourceAccount\":\"1\",\r\n    \"destinationAccount\":3,\r\n    \"operationTypeId\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8002/operation/transfer",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"operation",
+								"transfer"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		},
 		{
 			"name": "Cards",
-			"item": []
+			"item": [
+				{
+					"name": "Cards",
+					"item": [
+						{
+							"name": "GetAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cardUrl}}/cards",
+									"host": [
+										"{{cardUrl}}"
+									],
+									"path": [
+										"cards"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cardUrl}}/cards/5",
+									"host": [
+										"{{cardUrl}}"
+									],
+									"path": [
+										"cards",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serial\": \"1234-1234-1234-1236\",\r\n    \"pin\": \"1234\",\r\n    \"month\": 10,\r\n    \"year\": 2025,\r\n    \"cvv\": 123,\r\n    \"customerId\": 101,\r\n    \"productId\": 3,\r\n    \"cardTypeId\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{cardUrl}}/cards",
+									"host": [
+										"{{cardUrl}}"
+									],
+									"path": [
+										"cards"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serial\": \"1234-1234-1234-1236\",\r\n    \"pin\": \"1234\",\r\n    \"month\": 10,\r\n    \"year\": 2025,\r\n    \"cvv\": 123,\r\n    \"customerId\": 101,\r\n    \"productId\": 2,\r\n    \"cardTypeId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{cardUrl}}/cards/3",
+									"host": [
+										"{{cardUrl}}"
+									],
+									"path": [
+										"cards",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{cardUrl}}/cards/5",
+									"host": [
+										"{{cardUrl}}"
+									],
+									"path": [
+										"cards",
+										"5"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "CardTypes",
+					"item": [
+						{
+							"name": "GetAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cardUrl}}/cardtypes",
+									"host": [
+										"{{cardUrl}}"
+									],
+									"path": [
+										"cardtypes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cardUrl}}/cardtypes/1",
+									"host": [
+										"{{cardUrl}}"
+									],
+									"path": [
+										"cardtypes",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Credit\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{cardUrl}}/cardtypes",
+									"host": [
+										"{{cardUrl}}"
+									],
+									"path": [
+										"cardtypes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Creditos\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{cardUrl}}/cardtypes/2",
+									"host": [
+										"{{cardUrl}}"
+									],
+									"path": [
+										"cardtypes",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{cardUrl}}/cardtypes/6",
+									"host": [
+										"{{cardUrl}}"
+									],
+									"path": [
+										"cardtypes",
+										"6"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
 		},
 		{
 			"name": "Payments",
@@ -484,6 +908,11 @@
 		{
 			"key": "productUrl",
 			"value": "http://localhost:8000",
+			"type": "string"
+		},
+		{
+			"key": "cardUrl",
+			"value": "http://localhost:8001",
 			"type": "string"
 		}
 	]
