@@ -10,102 +10,783 @@
 			"name": "Customers",
 			"item": [
 				{
-					"name": "GetAll",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost/8080/customers",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"path": [
-								"8080",
-								"customers"
-							]
+					"name": "State",
+					"item": [
+						{
+							"name": "GetAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{customerUrl}}/state",
+									"host": [
+										"{{customerUrl}}"
+									],
+									"path": [
+										"state"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{customerUrl}}/state/1",
+									"host": [
+										"{{customerUrl}}"
+									],
+									"path": [
+										"state",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Lima\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{customerUrl}}/state",
+									"host": [
+										"{{customerUrl}}"
+									],
+									"path": [
+										"state"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Lima\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{customerUrl}}/state/1",
+									"host": [
+										"{{customerUrl}}"
+									],
+									"path": [
+										"state",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{customerUrl}}/state/2",
+									"host": [
+										"{{customerUrl}}"
+									],
+									"path": [
+										"state",
+										"2"
+									]
+								}
+							},
+							"response": []
 						}
-					},
-					"response": []
+					]
 				},
 				{
-					"name": "GetById",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost/8080/customers/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"path": [
-								"8080",
-								"customers",
-								"1"
-							]
+					"name": "City",
+					"item": [
+						{
+							"name": "GetAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{customerUrl}}/city",
+									"host": [
+										"{{customerUrl}}"
+									],
+									"path": [
+										"city"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{customerUrl}}/city/2",
+									"host": [
+										"{{customerUrl}}"
+									],
+									"path": [
+										"city",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Comas\",\r\n    \"stateId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{customerUrl}}/city",
+									"host": [
+										"{{customerUrl}}"
+									],
+									"path": [
+										"city"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Comas2\",\r\n    \"stateId\": 5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{customerUrl}}/city/2",
+									"host": [
+										"{{customerUrl}}"
+									],
+									"path": [
+										"city",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{customerUrl}}/city/2",
+									"host": [
+										"{{customerUrl}}"
+									],
+									"path": [
+										"city",
+										"2"
+									]
+								}
+							},
+							"response": []
 						}
-					},
-					"response": []
+					]
 				},
 				{
-					"name": "Create",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"url": {
-							"raw": "http://localhost/8080/customers",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"path": [
-								"8080",
-								"customers"
-							]
+					"name": "Address",
+					"item": [
+						{
+							"name": "GetAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{customerUrl}}/address",
+									"host": [
+										"{{customerUrl}}"
+									],
+									"path": [
+										"address"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{customerUrl}}/address/3",
+									"host": [
+										"{{customerUrl}}"
+									],
+									"path": [
+										"address",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"address\": \"calle siempre viva\",\r\n    \"stateId\": 1,\r\n    \"cityId\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{customerUrl}}/address",
+									"host": [
+										"{{customerUrl}}"
+									],
+									"path": [
+										"address"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"address\": \"calle nunca más\",\r\n    \"stateId\": 3,\r\n    \"cityId\": 4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{customerUrl}}/address/5",
+									"host": [
+										"{{customerUrl}}"
+									],
+									"path": [
+										"address",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{customerUrl}}/address/3",
+									"host": [
+										"{{customerUrl}}"
+									],
+									"path": [
+										"address",
+										"3"
+									]
+								}
+							},
+							"response": []
 						}
-					},
-					"response": []
+					]
 				},
 				{
-					"name": "Update",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"url": {
-							"raw": "http://localhost/8080/customers/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"path": [
-								"8080",
-								"customers",
-								"1"
-							]
+					"name": "Document Type",
+					"item": [
+						{
+							"name": "GetAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{customerUrl}}/documenttype",
+									"host": [
+										"{{customerUrl}}"
+									],
+									"path": [
+										"documenttype"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{customerUrl}}/documenttype/4",
+									"host": [
+										"{{customerUrl}}"
+									],
+									"path": [
+										"documenttype",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"description\": \"DNI\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{customerUrl}}/documenttype",
+									"host": [
+										"{{customerUrl}}"
+									],
+									"path": [
+										"documenttype"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"description\": \"DNI\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{customerUrl}}/documenttype/5",
+									"host": [
+										"{{customerUrl}}"
+									],
+									"path": [
+										"documenttype",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{customerUrl}}/documenttype/5",
+									"host": [
+										"{{customerUrl}}"
+									],
+									"path": [
+										"documenttype",
+										"5"
+									]
+								}
+							},
+							"response": []
 						}
-					},
-					"response": []
+					]
 				},
 				{
-					"name": "Delete",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "http://localhost/8080/customers/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"path": [
-								"8080",
-								"customers",
-								"1"
-							]
+					"name": "Document",
+					"item": [
+						{
+							"name": "GetAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{customerUrl}}/document",
+									"host": [
+										"{{customerUrl}}"
+									],
+									"path": [
+										"document"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{customerUrl}}/document/7",
+									"host": [
+										"{{customerUrl}}"
+									],
+									"path": [
+										"document",
+										"7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serial\": \"78787878\",\r\n    \"documentTypeId\": 4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{customerUrl}}/document",
+									"host": [
+										"{{customerUrl}}"
+									],
+									"path": [
+										"document"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serial\": \"12121212\",\r\n    \"documentTypeId\": 4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{customerUrl}}/document/7",
+									"host": [
+										"{{customerUrl}}"
+									],
+									"path": [
+										"document",
+										"7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{customerUrl}}/document/6",
+									"host": [
+										"{{customerUrl}}"
+									],
+									"path": [
+										"document",
+										"6"
+									]
+								}
+							},
+							"response": []
 						}
-					},
-					"response": []
+					]
+				},
+				{
+					"name": "Natural Person",
+					"item": [
+						{
+							"name": "GetAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{customerUrl}}/naturalperson",
+									"host": [
+										"{{customerUrl}}"
+									],
+									"path": [
+										"naturalperson"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{customerUrl}}/naturalperson/6",
+									"host": [
+										"{{customerUrl}}"
+									],
+									"path": [
+										"naturalperson",
+										"6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Nombre\",\r\n    \"lastName\": \"Apellido\",\r\n    \"documentId\": 5,\r\n    \"addressId\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{customerUrl}}/naturalperson",
+									"host": [
+										"{{customerUrl}}"
+									],
+									"path": [
+										"naturalperson"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Nombres\",\r\n    \"lastName\": \"Apellidos\",\r\n    \"documentId\": 5,\r\n    \"addressId\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{customerUrl}}/naturalperson/6",
+									"host": [
+										"{{customerUrl}}"
+									],
+									"path": [
+										"naturalperson",
+										"6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/8080/customers/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"8080",
+										"customers",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Body Corporate",
+					"item": [
+						{
+							"name": "GetAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{customerUrl}}/bodycorporate",
+									"host": [
+										"{{customerUrl}}"
+									],
+									"path": [
+										"bodycorporate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{customerUrl}}/bodycorporate/6",
+									"host": [
+										"{{customerUrl}}"
+									],
+									"path": [
+										"bodycorporate",
+										"6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Nombre\",\r\n    \"documentId\": 5,\r\n    \"addressId\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{customerUrl}}/bodycorporate",
+									"host": [
+										"{{customerUrl}}"
+									],
+									"path": [
+										"bodycorporate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"empresa\",\r\n    \"documentId\": 5,\r\n    \"addressId\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{customerUrl}}/bodycorporate/7",
+									"host": [
+										"{{customerUrl}}"
+									],
+									"path": [
+										"bodycorporate",
+										"7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{customerUrl}}/bodycorporate/7",
+									"host": [
+										"{{customerUrl}}"
+									],
+									"path": [
+										"bodycorporate",
+										"7"
+									]
+								}
+							},
+							"response": []
+						}
+					]
 				}
 			]
 		},
@@ -459,11 +1140,10 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "localhost:8002/operationtype",
+									"raw": "{{operationUrl}}/operationtype",
 									"host": [
-										"localhost"
+										"{{operationUrl}}"
 									],
-									"port": "8002",
 									"path": [
 										"operationtype"
 									]
@@ -488,11 +1168,10 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8002/operation/deposit",
+							"raw": "{{operationUrl}}/operation/deposit",
 							"host": [
-								"localhost"
+								"{{operationUrl}}"
 							],
-							"port": "8002",
 							"path": [
 								"operation",
 								"deposit"
@@ -516,11 +1195,10 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8002/operation/withdrawal",
+							"raw": "{{operationUrl}}/operation/withdrawal",
 							"host": [
-								"localhost"
+								"{{operationUrl}}"
 							],
-							"port": "8002",
 							"path": [
 								"operation",
 								"withdrawal"
@@ -547,11 +1225,10 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8002/operation/deposit",
+							"raw": "{{operationUrl}}/operation/deposit",
 							"host": [
-								"localhost"
+								"{{operationUrl}}"
 							],
-							"port": "8002",
 							"path": [
 								"operation",
 								"deposit"
@@ -578,11 +1255,10 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8002/operation/withdrawal",
+							"raw": "{{operationUrl}}/operation/withdrawal",
 							"host": [
-								"localhost"
+								"{{operationUrl}}"
 							],
-							"port": "8002",
 							"path": [
 								"operation",
 								"withdrawal"
@@ -609,11 +1285,10 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8002/operation/transfer",
+							"raw": "{{operationUrl}}/operation/transfer",
 							"host": [
-								"localhost"
+								"{{operationUrl}}"
 							],
-							"port": "8002",
 							"path": [
 								"operation",
 								"transfer"
@@ -637,11 +1312,10 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8002/operation/transfer",
+							"raw": "{{operationUrl}}/operation/transfer",
 							"host": [
-								"localhost"
+								"{{operationUrl}}"
 							],
-							"port": "8002",
 							"path": [
 								"operation",
 								"transfer"
@@ -913,6 +1587,16 @@
 		{
 			"key": "cardUrl",
 			"value": "http://localhost:8001",
+			"type": "string"
+		},
+		{
+			"key": "operationUrl",
+			"value": "http://localhost:8002",
+			"type": "string"
+		},
+		{
+			"key": "customerUrl",
+			"value": "http://localhost:8003",
 			"type": "string"
 		}
 	]
