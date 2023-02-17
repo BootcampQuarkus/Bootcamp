@@ -13,3 +13,6 @@
 [submodule "Customers"]
 	path = Customers
 	url = https://github.com/BootcampQuarkus/Customer
+[submodule "Queries"]
+	path = Queries
+	url = https://github.com/BootcampQuarkus/Queries
