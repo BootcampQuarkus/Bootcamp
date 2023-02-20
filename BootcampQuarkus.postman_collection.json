@@ -1620,7 +1620,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{operationUrl}}/operation?accountId=1",
+							"raw": "{{operationUrl}}/operation?accountId=2",
 							"host": [
 								"{{operationUrl}}"
 							],
@@ -1630,7 +1630,7 @@
 							"query": [
 								{
 									"key": "accountId",
-									"value": "1"
+									"value": "2"
 								}
 							]
 						}
@@ -1704,13 +1704,115 @@
 		},
 		{
 			"name": "Payments",
-			"item": []
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8007/payment",
+							"host": [
+								"localhost"
+							],
+							"port": "8007",
+							"path": [
+								"payment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Payment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 150.00,\r\n    \"description\": \"Pago\",\r\n    \"productId\": 31\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8007/payment",
+							"host": [
+								"localhost"
+							],
+							"port": "8007",
+							"path": [
+								"payment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Shopping",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8008/shopping?productId=61",
+							"host": [
+								"localhost"
+							],
+							"port": "8008",
+							"path": [
+								"shopping"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "61"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Shopping",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 200.00,\r\n    \"description\": \"Pago\",\r\n    \"productId\": 61\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8008/shopping",
+							"host": [
+								"localhost"
+							],
+							"port": "8008",
+							"path": [
+								"shopping"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		},
 		{
 			"name": "Queries",
 			"item": [
 				{
-					"name": "http://localhost:8006/query/323",
+					"name": "Products",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -1730,7 +1832,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8006/query/account/2",
+					"name": "Accounts",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -1745,6 +1847,48 @@
 								"query",
 								"account",
 								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credits",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8006/query/credit/31",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"query",
+								"credit",
+								"31"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LineOfCredit",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8006/query/lineofcredit/61",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8006",
+							"path": [
+								"query",
+								"lineofcredit",
+								"61"
 							]
 						}
 					},

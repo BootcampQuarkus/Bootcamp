@@ -16,3 +16,9 @@
 [submodule "Queries"]
 	path = Queries
 	url = https://github.com/BootcampQuarkus/Queries
+[submodule "Shopping"]
+	path = Shopping
+	url = https://github.com/BootcampQuarkus/Shopping
+[submodule "Users"]
+	path = Users
+	url = https://github.com/BootcampQuarkus/Users
