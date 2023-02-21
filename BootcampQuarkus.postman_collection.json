@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "b9ce0798-35b1-4921-a1d2-e0afe8bdef42",
+		"_postman_id": "303abdb1-5ea3-443e-a1a0-0c2c002e9d7b",
 		"name": "BootcampQuarkus",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "8000822"
+		"_exporter_id": "4501461"
 	},
 	"item": [
 		{
@@ -1889,6 +1889,67 @@
 								"query",
 								"lineofcredit",
 								"61"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\": \"57\",\r\n    \"password\": \"5555\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8004/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8004",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\": \"57\",\r\n    \"password\": \"5555\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8004/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8004",
+							"path": [
+								"users"
 							]
 						}
 					},
