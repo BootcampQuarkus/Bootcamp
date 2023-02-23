@@ -70,7 +70,7 @@ services:
       - "5435:5432"
   ms-customer:
     container_name: ms-customer
-    image: jtromero/bq-ms-customers
+    image: pedrodiaz/bq-ms-customer
     restart: always
     ports:
       - 8003:8080
@@ -83,7 +83,7 @@ services:
       - db-shopping
   ms-products:
     container_name: ms-products
-    image: pedrodiaz/bq-ms-products
+    image: pedrodiaz/bq-ms-product
     restart: always
     ports:
       - 8000:8080
@@ -96,7 +96,7 @@ services:
       - db-shopping
   ms-cards:
     container_name: ms-cards
-    image: pedrodiaz/bq-ms-cards
+    image: pedrodiaz/bq-ms-card
     restart: always
     ports:
       - 8001:8080
@@ -109,7 +109,7 @@ services:
       - db-shopping
   ms-operations:
     container_name: ms-operations
-    image: jtromero/bq-ms-operations
+    image: pedrodiaz/bq-ms-operation
     restart: always
     ports:
       - 8002:8080
@@ -122,7 +122,7 @@ services:
       - db-shopping
   ms-payments:
     container_name: ms-payments
-    image: jtromero/bq-ms-payments
+    image: pedrodiaz/bq-ms-payment
     restart: always
     ports:
       - 8007:8080
@@ -146,7 +146,7 @@ services:
       - db-operation
   ms-user:
     container_name: ms-user
-    image: jtromero/bq-ms-users
+    image: pedrodiaz/bq-ms-user
     restart: always
     ports:
       - 8004:8080
@@ -159,7 +159,7 @@ services:
       - db-shopping
   ms-queries:
     container_name: ms-queries
-    image: pedrodiaz/bq-ms-queries
+    image: pedrodiaz/bq-ms-query
     restart: always
     ports:
       - 8006:8080
