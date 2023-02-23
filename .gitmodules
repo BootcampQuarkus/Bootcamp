@@ -22,3 +22,6 @@
 [submodule "Users"]
 	path = Users
 	url = https://github.com/BootcampQuarkus/Users
+[submodule "CustomerWallet"]
+	path = CustomerWallet
+	url = https://github.com/BootcampQuarkus/CustomerWallet
