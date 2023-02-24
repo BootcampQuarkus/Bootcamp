@@ -183,3 +183,9 @@ services:
       - db-operation
       - db-payment
       - db-shopping
+  ms-customerwallet:
+    container_name: ms-customerwallet
+    image: roycarrascoh/bq-ms-customerwallet
+    restart: always
+    ports:
+      - 8009:8080
