@@ -1714,11 +1714,10 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "localhost:8007/payment",
+									"raw": "{{paymentUrl}}/payment",
 									"host": [
-										"localhost"
+										"{{paymentUrl}}"
 									],
-									"port": "8007",
 									"path": [
 										"payment"
 									]
@@ -1741,11 +1740,10 @@
 									}
 								},
 								"url": {
-									"raw": "localhost:8007/payment",
+									"raw": "{{paymentUrl}}/payment",
 									"host": [
-										"localhost"
+										"{{paymentUrl}}"
 									],
-									"port": "8007",
 									"path": [
 										"payment"
 									]
@@ -1764,11 +1762,10 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "localhost:8008/shopping?productId=61",
+									"raw": "{{shoppingUrl}}/shopping?productId=61",
 									"host": [
-										"localhost"
+										"{{shoppingUrl}}"
 									],
-									"port": "8008",
 									"path": [
 										"shopping"
 									],
@@ -1797,11 +1794,10 @@
 									}
 								},
 								"url": {
-									"raw": "localhost:8008/shopping",
+									"raw": "{{shoppingUrl}}/shopping",
 									"host": [
-										"localhost"
+										"{{shoppingUrl}}"
 									],
-									"port": "8008",
 									"path": [
 										"shopping"
 									]
@@ -1826,7 +1822,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"customerId\":\"323\",\r\n    \"password\":\"5555\",\r\n    \"card\":{\r\n        \"serial\":\"1234-1234-1234-1236\",\r\n        \"month\":10,\r\n        \"year\":2025,\r\n        \"cvv\":123\r\n    }\r\n}",
+									"raw": "{\r\n    \"customerId\":\"325\",\r\n    \"password\":\"5555\",\r\n    \"card\":{\r\n        \"serial\":\"1234-1234-1234-7412\",\r\n        \"month\":10,\r\n        \"year\":2025,\r\n        \"cvv\":123\r\n    }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1834,12 +1830,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8004/users",
-									"protocol": "http",
+									"raw": "{{usersMultiChannerlUrl}}/users",
 									"host": [
-										"localhost"
+										"{{usersMultiChannerlUrl}}"
 									],
-									"port": "8004",
 									"path": [
 										"users"
 									]
@@ -1862,15 +1856,48 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8004/users/login",
-									"protocol": "http",
+									"raw": "{{usersMultiChannerlUrl}}/users/login",
 									"host": [
-										"localhost"
+										"{{usersMultiChannerlUrl}}"
 									],
-									"port": "8004",
 									"path": [
 										"users",
 										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{usersMultiChannerlUrl}}/users",
+									"host": [
+										"{{usersMultiChannerlUrl}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{usersMultiChannerlUrl}}/users/63f7e39f2f37d26b33dbfb70",
+									"host": [
+										"{{usersMultiChannerlUrl}}"
+									],
+									"path": [
+										"users",
+										"63f7e39f2f37d26b33dbfb70"
 									]
 								}
 							},
@@ -1887,12 +1914,10 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8006/query/323",
-									"protocol": "http",
+									"raw": "{{queriesMultiChannelUrl}}/query/323",
 									"host": [
-										"localhost"
+										"{{queriesMultiChannelUrl}}"
 									],
-									"port": "8006",
 									"path": [
 										"query",
 										"323"
@@ -1907,12 +1932,10 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8006/query/account/2",
-									"protocol": "http",
+									"raw": "{{queriesMultiChannelUrl}}/query/account/2",
 									"host": [
-										"localhost"
+										"{{queriesMultiChannelUrl}}"
 									],
-									"port": "8006",
 									"path": [
 										"query",
 										"account",
@@ -1928,12 +1951,10 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8006/query/credit/31",
-									"protocol": "http",
+									"raw": "{{queriesMultiChannelUrl}}/query/credit/31",
 									"host": [
-										"localhost"
+										"{{queriesMultiChannelUrl}}"
 									],
-									"port": "8006",
 									"path": [
 										"query",
 										"credit",
@@ -1949,12 +1970,10 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8006/query/lineofcredit/61",
-									"protocol": "http",
+									"raw": "{{queriesMultiChannelUrl}}/query/lineofcredit/61",
 									"host": [
-										"localhost"
+										"{{queriesMultiChannelUrl}}"
 									],
-									"port": "8006",
 									"path": [
 										"query",
 										"lineofcredit",
@@ -2012,6 +2031,26 @@
 		{
 			"key": "customerUrl",
 			"value": "http://localhost:8003",
+			"type": "string"
+		},
+		{
+			"key": "shoppingUrl",
+			"value": "http://localhost:8008",
+			"type": "string"
+		},
+		{
+			"key": "paymentUrl",
+			"value": "http://localhost:8007",
+			"type": "string"
+		},
+		{
+			"key": "usersMultiChannerlUrl",
+			"value": "http://localhost:8004",
+			"type": "string"
+		},
+		{
+			"key": "queriesMultiChannelUrl",
+			"value": "http://localhost:8006",
 			"type": "string"
 		}
 	]

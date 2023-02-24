@@ -68,6 +68,19 @@ services:
        - './postgres/db_shopping:/var/lib/postgresql/data'
     ports:
       - "5435:5432"
+  db-redis:
+    container_name: db-redis
+    image: redis
+    restart: always
+    ports:
+      - 6379:6379
+    depends_on:
+      - db-customer
+      - db-product
+      - db-card
+      - db-operation
+      - db-payment
+      - db-shopping
   ms-customer:
     container_name: ms-customer
     image: pedrodiaz/bq-ms-customer
