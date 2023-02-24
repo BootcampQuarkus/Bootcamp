@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "b2f50869-8c09-47cb-b4bc-79dfeaed9636",
+		"_postman_id": "1acdfd4f-4be5-4aa1-b8fe-8b312ebacd26",
 		"name": "BootcampQuarkus",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "8000822"
+		"_exporter_id": "7929714"
 	},
 	"item": [
 		{
@@ -1989,7 +1989,117 @@
 		},
 		{
 			"name": "Wallet",
-			"item": []
+			"item": [
+				{
+					"name": "Customer Wallet",
+					"item": [
+						{
+							"name": "register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\":\"rcarrasco\",\r\n    \"cellphone\":\"986704669\",\r\n    \"password\":\"123456\",\r\n    \"amount\":0,\r\n    \"fullName\":\"Lincei Zanahoria Quito Tena\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8020/customerwallet/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8020",
+									"path": [
+										"customerwallet",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\":\"rcarrascos\",\r\n    \"password\":\"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8020/customerwallet/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8020",
+									"path": [
+										"customerwallet",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAll",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8020/customerwallet",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8020",
+									"path": [
+										"customerwallet"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8020/customerwallet/63f8d757345af361f4656fda",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8020",
+									"path": [
+										"customerwallet",
+										"63f8d757345af361f4656fda"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
 		}
 	],
 	"event": [
