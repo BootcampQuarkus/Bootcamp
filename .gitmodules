@@ -34,3 +34,9 @@
 [submodule "Token"]
 	path = Token
 	url = https://github.com/BootcampQuarkus/Token
+[submodule "OperationsWallet"]
+	path = OperationsWallet
+	url = https://github.com/BootcampQuarkus/OperationsWallet
+[submodule "Promo"]
+	path = Promo
+	url = https://github.com/BootcampQuarkus/Promo
