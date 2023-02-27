@@ -28,3 +28,9 @@
 [submodule "Associate"]
 	path = Associate
 	url = https://github.com/BootcampQuarkus/Associate
+[submodule "Validate"]
+	path = Validate
+	url = https://github.com/BootcampQuarkus/Validate
+[submodule "Token"]
+	path = Token
+	url = https://github.com/BootcampQuarkus/Token

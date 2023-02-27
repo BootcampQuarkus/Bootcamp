@@ -24,6 +24,8 @@ services:
        - './postgres/db_products:/var/lib/postgresql/data'
     ports:
       - "5432:5432"
+    depends_on:
+      - db-customer
   db-card:
     container_name: db-card
     image: postgres
@@ -35,6 +37,9 @@ services:
        - './postgres/db_cards:/var/lib/postgresql/data'
     ports:
       - "5431:5432"
+    depends_on:
+      - db-customer
+      - db-product
   db-operation:
     container_name: db-operation
     image: postgres
@@ -46,6 +51,10 @@ services:
        - './postgres/db_operations:/var/lib/postgresql/data'
     ports:
       - "5433:5432"
+    depends_on:
+      - db-customer
+      - db-product
+      - db-card
   db-payment:
     container_name: db-payment
     image: postgres
@@ -57,6 +66,11 @@ services:
        - './postgres/db_payment:/var/lib/postgresql/data'
     ports:
       - "5434:5432"
+    depends_on:
+      - db-customer
+      - db-product
+      - db-card
+      - db-operation
   db-shopping:
     container_name: db-shopping
     image: postgres
@@ -68,6 +82,12 @@ services:
        - './postgres/db_shopping:/var/lib/postgresql/data'
     ports:
       - "5435:5432"
+    depends_on:
+      - db-customer
+      - db-product
+      - db-card
+      - db-operation
+      - db-payment
   db-redis:
     container_name: db-redis
     image: redis
@@ -94,6 +114,7 @@ services:
       - db-operation
       - db-payment
       - db-shopping
+      - db-redis
   ms-products:
     container_name: ms-products
     image: pedrodiaz/bq-ms-product
@@ -107,6 +128,8 @@ services:
       - db-operation
       - db-payment
       - db-shopping
+      - db-redis
+      - ms-customer
   ms-cards:
     container_name: ms-cards
     image: pedrodiaz/bq-ms-card
@@ -120,6 +143,9 @@ services:
       - db-operation
       - db-payment
       - db-shopping
+      - db-redis
+      - ms-customer
+      - ms-products
   ms-operations:
     container_name: ms-operations
     image: pedrodiaz/bq-ms-operation
@@ -133,6 +159,10 @@ services:
       - db-operation
       - db-payment
       - db-shopping
+      - db-redis
+      - ms-customer
+      - ms-products
+      - ms-cards
   ms-payments:
     container_name: ms-payments
     image: pedrodiaz/bq-ms-payment
@@ -146,6 +176,11 @@ services:
       - db-operation
       - db-payment
       - db-shopping
+      - db-redis
+      - ms-customer
+      - ms-products
+      - ms-cards
+      - ms-operations
   ms-shopping:
     container_name: ms-shopping
     image: pedrodiaz/bq-ms-shopping
@@ -157,6 +192,14 @@ services:
       - db-product
       - db-card
       - db-operation
+      - db-payment
+      - db-shopping
+      - db-redis
+      - ms-customer
+      - ms-products
+      - ms-cards
+      - ms-operations
+      - ms-payments
   ms-user:
     container_name: ms-user
     image: pedrodiaz/bq-ms-user
@@ -170,6 +213,13 @@ services:
       - db-operation
       - db-payment
       - db-shopping
+      - db-redis
+      - ms-customer
+      - ms-products
+      - ms-cards
+      - ms-operations
+      - ms-payments
+      - ms-shopping
   ms-queries:
     container_name: ms-queries
     image: pedrodiaz/bq-ms-query
@@ -183,9 +233,102 @@ services:
       - db-operation
       - db-payment
       - db-shopping
+      - db-redis
+      - ms-customer
+      - ms-products
+      - ms-cards
+      - ms-operations
+      - ms-payments
+      - ms-shopping
+      - ms-user
+  ms-token:
+    container_name: ms-token
+    image: pedrodiaz/bq-ms-token
+    restart: always
+    ports:
+      - 8005:8080
+    depends_on:
+      - db-customer
+      - db-product
+      - db-card
+      - db-operation
+      - db-payment
+      - db-shopping
+      - db-redis
+      - ms-customer
+      - ms-products
+      - ms-cards
+      - ms-operations
+      - ms-payments
+      - ms-shopping
+      - ms-user
+      - ms-queries
   ms-customerwallet:
     container_name: ms-customerwallet
-    image: roycarrascoh/bq-ms-customerwallet
+    image: pedrodiaz/bq-ms-customerwallet
     restart: always
     ports:
       - 8009:8080
+    depends_on:
+      - db-customer
+      - db-product
+      - db-card
+      - db-operation
+      - db-payment
+      - db-shopping
+      - db-redis
+      - ms-customer
+      - ms-products
+      - ms-cards
+      - ms-operations
+      - ms-payments
+      - ms-shopping
+      - ms-user
+      - ms-queries
+      - ms-token
+  ms-associate:
+    container_name: ms-associate
+    image: pedrodiaz/bq-ms-associate
+    restart: always
+    ports:
+      - 8010:8080
+    depends_on:
+      - db-customer
+      - db-product
+      - db-card
+      - db-operation
+      - db-payment
+      - db-shopping
+      - db-redis
+      - ms-customer
+      - ms-products
+      - ms-cards
+      - ms-operations
+      - ms-payments
+      - ms-shopping
+      - ms-user
+      - ms-queries
+      - ms-token
+  ms-validate:
+    container_name: ms-validate
+    image: pedrodiaz/bq-ms-validate
+    restart: always
+    ports:
+      - 8011:8080
+    depends_on:
+      - db-customer
+      - db-product
+      - db-card
+      - db-operation
+      - db-payment
+      - db-shopping
+      - db-redis
+      - ms-customer
+      - ms-products
+      - ms-cards
+      - ms-operations
+      - ms-payments
+      - ms-shopping
+      - ms-user
+      - ms-queries
+      - ms-token
